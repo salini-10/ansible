@@ -33,7 +33,7 @@
 - name: work with register variable
   hosts: all
   tasks:
- - name: shellcommand date
+ - name: shellcommand
    ansible.builtin.shell: uptime
      register: OUT
  - name: printing out variable
