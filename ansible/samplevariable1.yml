@@ -22,4 +22,4 @@
       ansible.builtin.debug:
        msg: the url is {{URL}}
       vars:
-        URL=hosts.example.com
+        URL: hosts.example.com
