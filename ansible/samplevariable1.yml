@@ -29,3 +29,14 @@
     - name: print host name
       ansible.builtin.debug:
         msg: Architecture = {{ansible_architecture}}, IP address = {{ansible_eth0.ipv4.address}}
+
+- name: work with register variable
+  hosts: all
+  tasks:
+ - name: shellcommand date
+   ansible.builtin.shell: uptime
+     register: OUT
+ - name: printing out variable
+   ansible.builtin.debug:
+    msg: "{{OUT}}"
+
