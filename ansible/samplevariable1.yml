@@ -33,10 +33,10 @@
 - name: work with register variable
   hosts: all
   tasks:
- - name: shellcommand
-   ansible.builtin.shell: uptime
-     register: OUT
- - name: printing out variable
-   ansible.builtin.debug:
-    msg: "{{OUT}}"
+    - name: run a shellcommand
+      ansible.builtin.shell: uptime
+      register: OUT
+    - name: printing out variable
+      ansible.builtin.debug:
+        msg: "{{OUT}}"
 
