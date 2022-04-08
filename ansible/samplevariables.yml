@@ -14,3 +14,12 @@
     - name: print url from a file
       ansible.builtin.debug:
         msg: print URL is {{URL}}
+
+- name: task level variables
+  hosts: all
+  tasks:
+    - name: print url
+      ansible.builtin.debug:
+       msg: the url is {{URL}}
+      vars:
+        URL=hosts.example.com
