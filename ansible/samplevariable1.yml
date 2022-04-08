@@ -23,3 +23,9 @@
        msg: the url is {{URL}}
       vars:
         URL: hosts.example.com
+- name: Fact Variable
+  hosts: all
+  tasks:
+    - name: print host name
+      ansible.builtin.debug:
+        msg: Architecture = {{ansible_architecture}}
