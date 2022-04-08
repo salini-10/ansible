@@ -40,7 +40,7 @@
       ansible.builtin.set_fact:
         OUTPUT: "{{OUT.stdout}}"
 
-    - name: printing out variable
-      ansible.builtin.set_fact:
+    - name: printing output of shellcommand
+      ansible.builtin.debug:
         msg: "{{OUTPUT}}"
 
