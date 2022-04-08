@@ -38,5 +38,5 @@
       register: OUT
     - name: printing out variable
       ansible.builtin.debug:
-        msg: "{{OUT}}"
+        msg: "{{OUT.stdout}}"
 
