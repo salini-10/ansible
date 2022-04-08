@@ -1,4 +1,4 @@
 - name: Setup Frontend Component
-  hosts: inv
+  hosts: FRONTEND
   roles:
     - frontend
