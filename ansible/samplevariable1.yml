@@ -36,7 +36,11 @@
     - name: run a shellcommand
       ansible.builtin.shell: uptime
       register: OUT
+    - name: set a fact
+      ansible.builtin.set_fact:
+        OUTPUT: "{{OUT.stdout}}"
+
     - name: printing out variable
-      ansible.builtin.debug:
-        msg: "{{OUT.stdout}}"
+      ansible.builtin.set_fact:
+        msg: "{{OUTPUT}}"
 
