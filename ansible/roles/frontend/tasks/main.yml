@@ -5,7 +5,7 @@
 - name: Install nginx
   ansible.builtin.yum:
     name: nginx
-  state: installed
+    state: installed
 
 - name: Download and extract nginx
   ansible.builtin.unarchive:
@@ -15,8 +15,8 @@
 
 - name: clean old html content
   ansible.builtin.file:
-   path: /usr/share/nginx/html/
-   state: absent
+    path: /usr/share/nginx/html/
+    state: absent
 
 - name: copy the frontend content to nginx path
   ansible.builtin.copy:
