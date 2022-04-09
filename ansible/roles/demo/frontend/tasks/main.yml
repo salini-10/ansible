@@ -1,3 +1,0 @@
-- name: print frontend
-  ansible.builtin.debug:
-    msg: Frontend component
