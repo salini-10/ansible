@@ -1,6 +1,6 @@
 - name: demo on loops
   hosts: localhost
-  ansible.builtin.debug:
+  debug:
     msg: name of fruit = {{item}}
   loop:
     - apple
