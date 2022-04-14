@@ -7,7 +7,7 @@
     dest: /etc/yum.repos.d/mongodb.repo
 
 - name: Install Mongodb
-  ansible.buitlin.yum:
+  ansible.builtin.yum:
    name: mongodb-org
    state: installed
 - name: update mongodb configuration update listen address
