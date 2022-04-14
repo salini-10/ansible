@@ -15,3 +15,22 @@
     path: /etc/mongod.conf
     regexp: '127.0.0.1'
     replace: '0.0.0.0'
+- name: start mongodb service
+  ansible.builtin.systemd:
+    name: mongod
+    state: started
+    enabled: yes
+- name: download and extract mongodb
+  ansible.builtin.unarchive:
+    src: https://github.com/roboshop-devops-project/mongodb/archive/main.zip
+    dest: /tmp
+    remote_src: yes
+- name: loading catalogue schema
+  community.mongodb.mongodb_shell:
+    file: "/tmp/mongodb-main/catalogue.js"
+    idempotent: yes
+- name: load users schema
+  community.mongodb.mongodb_shell:
+    file: "/tmp/mongodb-main/users.js"
+    idempotent: yes
+
