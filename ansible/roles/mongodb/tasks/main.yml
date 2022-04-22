@@ -20,11 +20,10 @@
     name: mongod
     state: started
     enabled: yes
-- name: download and extract mongodb
-  ansible.builtin.unarchive:
-    src: https://github.com/roboshop-devops-project/mongodb/archive/main.zip
-    dest: /tmp
-    remote_src: yes
+- name: download and extract mongodb schema
+  include_role:
+    name: common
+    tasks_from: other
 - name: loading schema
   community.mongodb.mongodb_shell:
     file: "/tmp/mongodb-main/{{item}}.js"
