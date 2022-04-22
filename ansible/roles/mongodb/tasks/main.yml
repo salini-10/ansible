@@ -23,7 +23,7 @@
 - name: download and extract mongodb schema
   include_role:
     name: common
-    tasks_from: other
+    tasks_from: download
 - name: loading schema
   community.mongodb.mongodb_shell:
     file: "/tmp/mongodb-main/{{item}}.js"
