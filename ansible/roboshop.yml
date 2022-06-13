@@ -16,10 +16,10 @@
 #  roles:
 #    - catalogue
 
-name: roboshopsetup
-become: yes
-hosts: '{{HOST}}'
-roles:
+- name: roboshopsetup
+  become: yes
+  hosts: '{{HOST}}'
+  roles:
     - "{{role_name}}"
 
 
