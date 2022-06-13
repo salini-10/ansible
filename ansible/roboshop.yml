@@ -1,14 +1,14 @@
-- name: Setup Frontend Component
-  hosts: FRONTEND
-  become: yes
-  roles:
-    - frontend
+#name: Setup Frontend Component
+#  hosts: FRONTEND
+#  become: yes
+#  roles:
+#    - frontend
 
-- name: Setup Mongodb Component
-  hosts: MONGODB
-  become: yes
-  roles:
-    - mongodb
+#- name: Setup Mongodb Component
+#  hosts: MONGODB
+#  become: yes
+#  roles:
+#    - mongodb
 
 #- name: Setup Catalogue Component
 #  hosts: CATALOGUE
@@ -16,10 +16,10 @@
 #  roles:
 #    - catalogue
 
-# name: roboshopsetup
- # become: yes
-  #hosts: '{{HOST}}'
-  #roles:
+name: roboshopsetup
+become: yes
+hosts: '{{HOST}}'
+roles:
     - "{{role_name}}"
 
 
