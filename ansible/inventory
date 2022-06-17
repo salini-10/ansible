@@ -8,3 +8,4 @@ catalogue.roboshop.internal
 redisansible.roboshop.internal
 [USER]
 users.roboshop.internal
+[CART]
